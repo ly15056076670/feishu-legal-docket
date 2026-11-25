@@ -1,0 +1,48 @@
+{
+  "download_link_patterns": [
+    {
+      "domain": "zxfw.court.gov.cn",
+      "description": "全国法院统一送达平台（最常见）",
+      "pattern": "https?://[^\\s/]+/zxfw/#/pagesAjkj/app/wssd/index\\?[^\\s]*",
+      "required_params": [
+        "qdbh",
+        "sdbh",
+        "sdsin"
+      ],
+      "download_strategy": "api_first"
+    },
+    {
+      "domain": "sd.gdems.com",
+      "description": "广东法院电子送达平台（限广东地区）",
+      "pattern": "https?://[^\\s/]+/v3/dzsd/[a-zA-Z0-9]+",
+      "required_params": [],
+      "download_strategy": "browser_only"
+    },
+    {
+      "domain": "jysd.10102368.com",
+      "description": "集约送达平台（邮政集约送达服务）",
+      "pattern": "https?://[^\\s/]+/sd\\?key=[a-zA-Z0-9_\\-]+",
+      "required_params": [
+        "key"
+      ],
+      "download_strategy": "browser_only"
+    },
+    {
+      "domain": "dzsd.hbfy.gov.cn",
+      "description": "湖北电子送达平台（限湖北地区法院）",
+      "pattern": "https?://[^\\s/]+/(?:hb/msg=[a-zA-Z0-9]+|sfsddz\\b)",
+      "required_params": [],
+      "download_strategy": "browser_only"
+    },
+    {
+      "domain": "sfpt.cdfy12368.gov.cn",
+      "alias_domains": [
+        "171.106.48.55:28083"
+      ],
+      "description": "司法送达网（全国法院司法送达平台）",
+      "pattern": "https?://[^\\s/]+/sfsdw//r/[a-zA-Z0-9]+",
+      "required_params": [],
+      "download_strategy": "browser_only"
+    }
+  ]
+}
